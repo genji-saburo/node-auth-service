@@ -12,6 +12,8 @@ db.User = db.import(__dirname + '/models/user');
 db.AccessToken = db.import(__dirname + '/models/access_token');
 db.RefreshToken = db.import(__dirname + '/models/refresh_token');
 db.Client = db.import(__dirname + '/models/client');
+db.Permission = db.import(__dirname + '/models/permission');
+db.Role = db.import(__dirname + '/models/role');
 
 // drop the entire db when on a local machine and run the test files in the test/ dir
 if (!process.env.NODE_ENV) {

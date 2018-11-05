@@ -23,6 +23,8 @@ app.use(app.oauth.errorHandler());
 app.use('/', require('./routes/index')(app));
 app.use('/api/oauth', require('./routes/oauth')(app));
 app.use('/api/auth', require('./routes/auth')(app));
+app.use('/api/permission', require('./routes/permission')(app));
+app.use('/api/role', require('./routes/role')(app));
 
 app.listen(port, function() {
     console.log('Server started... http://localhost:%d', port);

@@ -13,6 +13,7 @@ module.exports = function(db, DataTypes) {
             unique: true,
             notNull: true,
             isEmail: true
-        }
+        },
+        roles:  DataTypes.STRING
     });
 };
