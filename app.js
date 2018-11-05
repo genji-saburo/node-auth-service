@@ -21,8 +21,8 @@ app.oauth = oauthServer({
 app.use(app.oauth.errorHandler());
 
 app.use('/', require('./routes/index')(app));
-app.use('/api/users', require('./routes/users')(app));
-app.use('/oauth', require('./routes/oauth')(app));
+app.use('/api/oauth', require('./routes/oauth')(app));
+app.use('/api/auth', require('./routes/auth')(app));
 
 app.listen(port, function() {
     console.log('Server started... http://localhost:%d', port);
